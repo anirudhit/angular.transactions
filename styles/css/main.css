@@ -1,0 +1,495 @@
+/*Reset for elements*/
+body{
+    background-color: transparent;
+}
+ul{
+    list-style: none;
+}
+.excep-msg{
+    color: red;
+    font-size: 12px;
+}
+.pri-color{
+    color: #00549C;
+    font-size: 12px;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.disp-i{
+    display: inline;
+}
+.disp-b{
+    display: block;
+}
+.disp-ib{
+    display: inline-block;
+}
+.disp-ib-imp{
+    display: inline-block !important;
+}
+
+.img-100-per{
+    height: 100%;
+    width: 100%;
+}
+
+/*Common classes*/
+.mr-auto{
+    margin: 0 auto;
+}
+.mr-reset{
+	margin: 0px;
+}
+.mr-5{
+    margin: 5px;
+}
+.mr-10{
+    margin: 10px;
+}
+.mr-15{
+    margin: 15px;
+}
+.mr-20{
+    margin: 20px;
+}
+.mr-t-5{
+    margin-top : 5px;
+}
+.mr-r-5{
+    margin-right : 5px;
+}
+.mr-b-5{
+    margin-bottom : 5px;
+}
+.mr-l-5{
+    margin-left : 5px;
+}
+.mr-t-10{
+    margin-top : 10px;
+}
+.mr-r-10{
+    margin-right : 10px;
+}
+.mr-b-10{
+    margin-bottom : 10px;
+}
+.mr-l-10{
+    margin-left : 10px;
+}
+.mr-t-15{
+    margin-top : 15px;
+}
+.mr-r-15{
+    margin-right : 15px;
+}
+.mr-b-15{
+    margin-bottom : 15px;
+}
+.mr-l-15{
+    margin-left : 15px;
+}
+.mr-t-20{
+    margin-top : 20px;
+}
+.mr-r-20{
+    margin-right : 20px;
+}
+.mr-b-20{
+    margin-bottom : 20px;
+}
+.mr-l-20{
+    margin-left : 20px;
+}
+
+.pd-5{
+    padding: 5px;
+}
+.pd-10{
+    padding: 10px;
+}
+.pd-15{
+    padding: 15px;
+}
+.pd-20{
+    padding: 20px;
+}
+.pd-t-5{
+    padding-top : 5px;
+}
+.pd-r-5{
+    padding-right : 5px;
+}
+.pd-b-5{
+    padding-bottom : 5px;
+}
+.pd-l-5{
+    padding-left : 5px;
+}
+.pd-t-10{
+    padding-top : 10px;
+}
+.pd-r-10{
+    padding-right : 10px;
+}
+.pd-b-10{
+    padding-bottom : 10px;
+}
+.pd-l-10{
+    padding-left : 10px;
+}
+.pd-t-15{
+    padding-top : 15px;
+}
+.pd-r-15{
+    padding-right : 15px;
+}
+.pd-b-15{
+    padding-bottom : 15px;
+}
+.pd-l-15{
+    padding-left : 15px;
+}
+.pd-t-20{
+    padding-top : 20px;
+}
+.pd-r-20{
+    padding-right : 20px;
+}
+.pd-b-20{
+    padding-bottom : 20px;
+}
+.pd-l-20{
+    padding-left : 20px;
+}
+
+
+.ft-13{
+    font-size: 13px;
+}
+.ft-14{
+    font-size: 14px;
+}
+.ft-15{
+    font-size: 15px;
+}
+.ft-16{
+    font-size: 16px;
+}
+.ft-18{
+    font-size: 18px;
+}
+
+.ft-r-15-200{
+    font: 200 15px Roboto;
+}
+
+.reset-a:focus{
+	text-decoration: none;
+	outline: unset;
+	outline-offset: outline-offset;
+}
+.reset-a:hover{
+	text-decoration: none;
+}
+.reset-bg{
+    background-color: transparent;
+}
+.reset-border-radius{
+    border-radius: 0px;
+}
+.reset-box-shadow{
+    box-shadow: none;
+}
+
+.text-align-center{
+    text-align: center;
+}
+.text-align-justify{
+    text-align: justify;
+}
+.text-t-u{
+    text-transform: uppercase;
+}
+
+.ab-desc-wrapper{
+    max-width: 815px;
+    padding: 32px 0 32px 85px;
+    position: relative;
+    top: 50px;
+}
+.ab-desc p:first-child{
+    color: #FFFFFF;
+    font: 500 34px Roboto;
+}
+.ab-desc p:nth-child(2){
+    color: #7d7d7d;
+    font: 500 20px Roboto;
+    line-height: 28px;
+}
+.ab-desc p:nth-child(3){
+    color: #FFFFFF;
+    font: 500 14px Roboto;
+    letter-spacing: 2px;
+}
+
+
+.ab-navbar-inverse{
+    background-color : #3f51b5 !important;
+    border-color : #3f51b5 !important;
+    border-radius: 0px !important;
+    margin: 0;
+    padding: 0 0 5px 0;
+}
+.ab-reset-navbar .navbar-nav>li>a{
+    color : #DEDEDE;
+}
+.ab-navbar-nav{
+    margin-top : 40px;
+}
+.ab-navbar-nav li a{
+    color: #EEEEEE !important;
+    font: 400 14px Roboto;
+    letter-spacing: 2px;
+    margin: 0 5px;
+    padding: 15px 10px;
+}
+.ab-navbar-nav-sel{
+    border-bottom: 3px solid #FFFFFF;
+}
+.ab-navbar-brand{
+    border: 3px solid #FFFFFF;
+    color : #FFFFFF;
+    height: 100px;
+    position: relative;
+    width: 100px;
+}
+.ab-navbar-brand-sm{
+    border: 3px solid #FFFFFF;
+    color : #FFFFFF;
+    height: 85px;
+    position: relative;
+    width: 85px;
+}
+.ab-navbar-brand-xs{
+    border: 3px solid #FFFFFF;
+    color : #FFFFFF;
+    height: 65px;
+    position: relative;
+    width: 65px;
+}
+.ab-logo{
+    bottom: 5px;
+    font-size: 22px;
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+}
+.ab-logo-sm{
+    bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+}
+.ab-logo-xs{
+    bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+}
+.s-actions-wrapper:hover .s-action {
+    background-color: #dedede;
+}
+.s-actions-wrapper:hover .sa-action {
+    color: #777777;
+}
+.s-action:hover{
+    background-color: #ffffff !important;
+}
+.sa-action:hover{
+    color: #222222 !important;
+}
+.s-actions-list{
+    padding: 0;
+}
+.s-actions-list .s-action{
+    background-color: #ffffff;
+    border-radius: 100px;
+    height: 24px;
+    margin: 0 6px 0 0;
+    width: 24px;
+    transition: all 600ms ease;
+}
+.s-actions-list .sa-action{
+    border-radius: 100px;
+    color: #444444;
+    height: 24px;
+    padding: 5px 0;
+    width: 24px;
+    transition: all 600ms ease;
+}
+/* Styles for home template */
+.ab-home-wrapper, .ab-about-wrapper, .ab-contact-wrapper{
+    padding: 96px 32px;
+}
+.ab-about-xs-wrapper{
+    padding: 48px 16px;
+}
+.ab-home-ic{
+    border: 2px solid #DEDEDE;
+    box-shadow: none;
+    font-size: 100px;
+    padding: 85px 0;
+}
+.ab-home-ic-xs{
+    border: 2px solid #DEDEDE;
+    box-shadow: none;
+    padding: 0px 0 25px 0;
+}
+.ic-header{
+	font-size: 55px;
+	position: relative;
+	top: -45px;
+}
+.ab-home-h{
+    color: #1F1F1F;
+    font: 100 18px Roboto;
+    letter-spacing: 4px;
+    line-height: 20px;
+}
+.ab-home-h-xs{
+    color: #1F1F1F;
+    font: 100 18px Roboto;
+    letter-spacing: 4px;
+    line-height: 20px;
+	position: relative;
+	top: -15px;
+}
+
+.ab-home-p{
+    color: #1F1F1F;
+    font: 100 15px Roboto;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+}
+
+/* Styles for about template */
+.ab-about-header-p{
+	line-height: 50.4px;
+	font: 100 42px Roboto;
+}
+.ab-about-body{
+	color: #1F1F1F;
+	font: 100 16px Roboto;
+	letter-spacing: 0.5px;
+	line-height: 28px;
+	padding: 45px 25px;
+}
+.ab-about-xs-header-p{
+	line-height: 34px !important;
+	font: 100 21px Roboto;
+}
+.ab-about-xs-body{
+	color: #1F1F1F;
+	font: 100 14px Roboto;
+	letter-spacing: 0.5px;
+	line-height: 26px;
+	padding: 25px 10px 10px 10px;
+}
+
+
+/* Styles for contact template */
+.ab-contact-img{
+    box-sizing: content-box;
+    height: 150px;
+    padding: 35px 0;
+    width: 150px;
+}
+.ab-contact-name{
+    font: 100 18px Roboto;
+    letter-spacing: 4px;
+}
+.ab-contact-details{
+    font: 200 16px Roboto;
+    letter-spacing: 0.5px;
+}
+#ab-contact-map{
+	height: 400px;
+	width: 100%;
+}
+.ab-contact-map-wrapper{
+	padding: 20px 6%;
+	width: 100%;
+}
+
+/*button styles*/
+.ab-btn{
+    background-color: #1F1F1F;
+    border: none;
+    color: #FFFFFF;
+    font: 100 14px Roboto;
+    letter-spacing: 3px;
+    padding: 14px 35px;
+    transition: 0.1s background-color linear, 0.1s color linear;
+}
+.ab-btn:hover{
+    opacity: 0.8;
+}
+
+/*Ghost button styles*/
+.ab-ghost-btn{
+    background-color: transparent;
+    border: 2px solid #111111;
+    color: #111111;
+    font: 300 15px Roboto;
+    letter-spacing: 2px;
+    padding: 21px 34px;
+    transition: 0.1s background-color linear, 0.1s color linear;
+}
+.ab-ghost-btn:hover{
+    background-color: #111111;
+    color: #FFFFFF;
+}
+
+/*Over-ride styles of angular material if needed */
+.ab-dialog{
+	width: 50%;
+}
+.ab-toolbar{
+    background-color: #111111 !important;
+    color: #FFFFFF !important;
+}
+
+/*Pre footer styles*/
+#pre-footer{
+    background-color: #F0F0F0;
+    color: #1F1F1F;
+}
+.pre-footer-wrapper{
+    margin: 0 auto;
+    padding: 95px 32px 55px 32px;
+    width : 85%;
+}
+.pre-footer-text{
+    font: 100 18px Roboto;
+    letter-spacing: 3px;
+}
+.pre-footer-actions{
+    padding: 20px 0 0 0;
+}
+/* footer styles starts */
+#footer{
+    background-color: #201a16;
+    color: rgba(255,255,255,.4);
+}
+.footer-inner{
+    padding: 64px 32px;
+}
+.footer-content{
+    margin : 1.5em 0 0 0;
+}
+/* footer styles ends */

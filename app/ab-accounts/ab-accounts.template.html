@@ -1,0 +1,136 @@
+<h4>Summary</h4>
+
+<table class="table table-responsive table-bordered mr-t-20">
+	<thead> 
+		<tr> 
+			<th></th> 
+			<th>TYPE</th> 
+			<th>ID</th> 
+			<th>BALANCE</th> 
+		</tr> 
+	</thead>
+	<tbody>
+		<tr ng-repeat="account in $ctrl.accountBalance"> 
+			<th scope="row" class="text-align-center">
+				<button type="button" class="btn btn-primary" 
+					data-toggle="modal" data-target="#view-history" ng-click="$ctrl.viewBalance($index)">VIEW</button>
+			</th>
+			<td>{{account.type}}</td>
+			<td>{{account.id}}</td>
+			<td>
+				<div class="pull-left">{{account.balance | currency : 'R'}}</div>
+				<div class="pull-right">
+					<button type="button" class="btn btn-primary"
+						data-toggle="modal" data-target="#withdraw-amount" ng-click="$ctrl.withdrawAmount(account)">WITHDRAW</button>
+					<button type="button" class="btn btn-primary"
+						data-toggle="modal" data-target="#deposit-amount" ng-click="$ctrl.depositAmount(account)">DEPOSIT</button>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<div class="modal fade" id="view-history" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Transaction history</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="clearfix">
+      		<div class="pull-left pri-color">{{$ctrl.viewObj.account.type}}</div>
+      		<div class="pull-right pri-color">{{$ctrl.viewObj.account.id}}</div>
+      	</div>
+
+        <table class="table table-responsive table-bordered mr-t-20">
+			<thead> 
+				<tr> 
+					<th>BALANCE</th> 
+					<th>AMOUNT</th> 
+					<th>DATE</th> 
+				</tr> 
+			</thead>
+			<tbody>
+				<!-- <tr ng-repeat="account in $ctrl.viewObj.account"> 
+					<td>{{account.type}}</td>
+					<td>{{account.id}}</td>
+					<td>
+						<div class="pull-left">{{account.balance | currency : 'R'}}</div>
+						<div class="pull-right">
+							<button type="button" class="btn btn-primary"
+								data-toggle="modal" data-target="#withdraw-amount" ng-click="$ctrl.withdrawAmount(account)">WITHDRAW</button>
+							<button type="button" class="btn btn-primary"
+								data-toggle="modal" data-target="#deposit-amount" ng-click="$ctrl.depositAmount(account)">DEPOSIT</button>
+						</div>
+					</td>
+				</tr> -->
+			</tbody>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$ctrl.viewBalanceReset()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="withdraw-amount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Withdraw Amount</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-inline">
+		  <div class="form-group">
+		    <label for="withdraw-amt">Withdraw</label>
+		    <input type="text" class="form-control" id="withdraw-amt" 
+		    	ng-model="$ctrl.setWithdrawAmount" placeholder="Amount"
+		    	ng-change="$ctrl.checkwithdrawExceptionMessage()">
+		  </div>	  
+		</form>
+      </div>
+      <div class="modal-footer">
+      	<div class="pull-left">
+      		<span class="excep-msg" ng-show="$ctrl.withdrawObj.excepMsg">
+      			Withdraw cannot exceed {{$ctrl.withdrawObj.amountWithdrawable}}
+      		</span>
+      	</div>
+      	<div class="pull-right">
+      		<button type="button" class="btn btn-primary" data-dismiss="modal" 
+      			ng-click="$ctrl.submitWithdrawAmount()">Withdraw</button>
+        	<button type="button" class="btn btn-default" data-dismiss="modal" 
+        		ng-click="$ctrl.resetWithdrawAmount()">Close</button>
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="deposit-amount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Deposit Amount</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-inline">
+		  <div class="form-group">
+		    <label for="deposit-amt">Deposit</label>
+		    <input type="text" class="form-control" id="deposit-amt" ng-model="$ctrl.setDepositAmount" placeholder="Amount">
+		  </div>	  
+		</form>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="$ctrl.submitDepositAmount()">Deposit</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$ctrl.resetDepositAmount()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

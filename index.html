@@ -1,0 +1,110 @@
+<html lang="en" ng-app="AbApp">
+<head>
+    <meta name="viewport" content="initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <title>Acme Bank</title>
+    <link rel="icon" type="image/ico" href="imgs/favicon.ico" />
+    <!-- Angular material styles starts -->
+    <link rel="stylesheet" href="styles/vendors/angular-material.min.css">
+    <!-- Angular material ends -->
+
+    <!-- Roboto font styles starts -->
+    <link rel="stylesheet" href="styles/css/roboto.css">
+    <!-- Roboto font ends -->
+
+    <!-- Twitter Bootstrap styles starts -->
+    <link rel="stylesheet" href="styles/vendors/bootstrap.min.css">
+    <!-- Twitter Bootstrap ends -->
+
+    <!-- Font awesome styles starts -->
+    <link rel="stylesheet" href="styles/fonts/font-awesome/css/font-awesome.min.css">
+    <!-- Font awesome ends -->
+
+    <!-- Global styles starts -->
+    <link rel="stylesheet" href="styles/css/main.css">
+    <!-- Global styles ends -->
+
+</head>
+<body ng-cloak>
+
+    <main  ng-controller="AbCtrl">
+        <header>
+            <nav class="navbar navbar-inverse ab-navbar-inverse">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ab-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+
+                  <div class="disp-ib ab-navbar-brand mr-t-20 mr-r-20 mr-b-20 hidden-sm hidden-xs">
+                    <div class="ab-logo">AB</div>
+                  </div>
+				  
+				  <div class="disp-ib ab-navbar-brand-sm mr-t-15 mr-r-15 mr-b-15 mr-l-15 hidden-lg visible-sm hidden-xs">
+                    <div class="ab-logo-sm">AB</div>
+                  </div>
+				  
+				  <div class="disp-ib ab-navbar-brand-xs mr-t-10 mr-r-10 mr-b-10 mr-l-10 hidden-lg hidden-sm visible-xs">
+                    <div class="ab-logo-xs">AB</div>
+                  </div>
+				  
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="ab-navbar-collapse-1">
+                  <div class="clearfix">
+                    <ul class="nav navbar-nav navbar-right ab-navbar-nav">
+                        <li class="text-t-u" ng-repeat="nav in profile.header">
+                            <a class="disp-ib-imp" ng-class="{'ab-navbar-nav-sel':nav.selected}" ng-href="{{nav.navigateTo}}">{{nav.title}}</a>
+                        </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div ng-view class="clearfix"></div>
+        </div>
+
+        
+		
+    </main>
+
+<!-- jQuery library -->
+<script src="scripts/lib/jquery.min.js"></script>
+<!-- jQuery library ends -->
+
+<!-- Angular Library starts -->
+<script src="scripts/lib/angular.min.js"></script>
+<script src="scripts/lib/angular-route.min.js"></script>
+<!-- Angular Library starts -->
+
+<!-- Angular Material starts -->
+<script src="scripts/lib/angular-animate.min.js"></script>
+<script src="scripts/lib/angular-aria.min.js"></script>
+<script src="scripts/lib/angular-material.min.js"></script>
+<!-- Angular Material ends -->
+
+<!-- Twitter Bootstrap starts -->
+<script src="scripts/lib/bootstrap.min.js"></script>
+<!-- Twitter Bootstrap ends -->
+
+<script src="scripts/app.module.js"></script>
+<script src="scripts/app.config.js"></script>
+<script src="scripts/app.js"></script>
+
+<!-- Ab contact starts -->
+<script src="app/ab-accounts/ab-accounts.module.js"></script>
+<script src="app/ab-accounts/ab-accounts.component.js"></script>
+<!-- Ab contact ends -->
+
+</body>
+</html>
